@@ -47,8 +47,10 @@ public class InDoor {
             Object next =  iterator.next();
             
         }
+    }
 
-
+    public void branchMethod(){
+        System.out.println("hello");
     }
 
 }
