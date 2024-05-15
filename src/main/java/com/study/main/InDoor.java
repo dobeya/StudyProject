@@ -13,55 +13,21 @@ import java.util.*;
 public class InDoor {
 
     public static void main(String[] args) {
-        TreeSet<Object> objects = new TreeSet<>(new Comparator<Object>() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                if (null == o1 || null == o2) {
-                    throw new RuntimeException("不允许传入空值");
-                }
-                return ((String) o1).length() - ((String) o2).length();
-            }
-        });
-        objects.add("efg");
-        objects.add("abc");
-        objects.add("hig");
-        System.out.println(objects);
-        objects.add("klm");
-        TreeSet<Object> objects1 = new TreeSet<>();
-        objects.add("sss");
-        objects.add(new Object());
-        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-        ThreadLocal<Object> tl = new ThreadLocal<>();
-        tl.set(new Object());
-        for (Object o : objectObjectHashMap.keySet()) {
-            
-        }
+        TreeSet<Object> objects = new TreeSet<>();
+        objects.add("测试");
 
-        for (int i = 0; i < args.length; i++) {
-            String arg = args[i];
-            
-        }
+        UseTest useTest = new UseTest();
+        useTest.UseTestShow();
 
-        Iterator<Object> iterator = objectObjectHashMap.keySet().iterator();
-        while (iterator.hasNext()) {
-            Object next =  iterator.next();
-            
-        }
     }
 
     public void branchMethod(){
         System.out.println("hello");
     }
 
-}
-
-class ActionImpl implements Action{
-    @Override
-    public void showMsg() {
-
+    public String otherMethod(){
+        System.out.println("你好！");
+        return null;
     }
 }
 
-interface Action{
-    public void showMsg();
-}
